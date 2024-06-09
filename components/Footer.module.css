@@ -1,0 +1,39 @@
+.footer {
+    background-color: #f1f1f1; 
+    color: #333; 
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ddd; 
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 10%;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .socialLinks {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .socialLinks li {
+    display: inline;
+  }
+  
+  .socialLinks a {
+    color: #333; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .socialLinks a:hover {
+    color: #007bff; 
+  }
+  

@@ -1,0 +1,49 @@
+.gallery {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+
+.image {
+    width: 50%;
+}
+
+.textBox {
+    width: 50%;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;  
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        width:80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10%;
+    }
+
+    .title{
+        font-size: 100%;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .textBox {
+        position: static; /* Ensures it is in the flow of the document */
+        padding: 20px;
+    }
+}
