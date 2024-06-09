@@ -1,0 +1,26 @@
+# Node modules Verzeichnis
+/node_modules/
+
+# Build-Verzeichnisse
+/build/
+/dist/
+
+# Temporäre Dateien
+*.tmp
+*.log
+*.bak
+
+# Verzeichnisse von Betriebssystemen und IDEs
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Umgebungsdateien
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
