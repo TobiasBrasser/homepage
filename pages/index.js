@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from "./index.module.css"
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import Head from 'next/head'
 
 
