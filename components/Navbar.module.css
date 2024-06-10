@@ -18,8 +18,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 25%;
 }
+
 
 .nav_ul {
     list-style: none;
@@ -50,7 +50,7 @@
 
 .nav_ul_li_a {
     font-size: 100%;
-    padding: 7px 25px;
+    padding: 7px 15px;
     border-radius: 3px;
     text-decoration: none;
     line-height: normal;
@@ -155,6 +155,10 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
+}
+
+.lock{
+    width: 5%;
 }
 
 @media (max-width: 1024px) {

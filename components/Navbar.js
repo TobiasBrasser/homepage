@@ -43,8 +43,11 @@ function Navbar() {
             <li className={Styles.nav_ul_li}>
               <Link className={Styles.nav_ul_li_a} href="/hobbies">Hobbies</Link>
             </li>
-           
+            <li className={Styles.nav_ul_li}>
+              <Link className={Styles.nav_ul_li_a} href="/dokumente">🔒 Dokumente</Link>
+            </li>
           </ul>
+         
         </nav>
       </div>
 
@@ -64,7 +67,9 @@ function Navbar() {
           <li className={Styles.nav_ul_li}> 
             <Link className={Styles.nav_ul_li_a} href="/hobbies">Hobbies</Link>
           </li>
-
+          <li className={Styles.nav_ul_li}>
+              <Link className={Styles.nav_ul_li_a} href="/dokumente">🔒 Dokumente</Link>
+          </li>
         </ul>
       </nav>
 
