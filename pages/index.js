@@ -1,6 +1,5 @@
 import React from 'react'
 import Styles from "./index.module.css"
-import Footer from '../components/Footer'
 import Head from 'next/head'
 
 
@@ -20,7 +19,6 @@ function IndexPage() {
               <h1 className={Styles.title}>Herzlich Willkommen zu meiner Homepage</h1>
             </div>
         </div>
-        <Footer />
     </>
   ) /** Test */
 }
