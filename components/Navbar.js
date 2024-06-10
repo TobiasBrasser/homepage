@@ -26,7 +26,7 @@ function Navbar() {
             <div></div>
             <div></div>
           </div>
-          <img className={Styles.logo} src="public/logo.png" alt="Logo" />
+          <img className={Styles.logo} src={require('/logo.png')} alt="Logo" />
         </div>
         
         <nav className={Styles.rightSide}>
