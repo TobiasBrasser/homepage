@@ -44,7 +44,7 @@ function Navbar() {
               <Link className={Styles.nav_ul_li_a} href="/hobbies">Hobbies</Link>
             </li>
             <li className={Styles.nav_ul_li}>
-              <Link className={Styles.nav_ul_li_a} href="/dokumente">🔒 Dokumente</Link>
+              <Link className={Styles.nav_ul_li_a} href="./dokumente">🔒 Dokumente</Link>
             </li>
           </ul>
          
@@ -57,9 +57,12 @@ function Navbar() {
 
       <nav className={`${menuOpen ? Styles.nav_open : Styles.nav_closed}`}>
         <ul className={Styles.nav_ul_mobile}>
-        <img className={Styles.logo} src="./logo.png" alt="Logo" />
+        <img className={Styles.logoflyout} src="./logo.png" alt="Logo" />
           <li className={Styles.nav_ul_li}>
             <Link className={Styles.nav_ul_li_a} href="/">Home</Link>
+          </li>
+          <li className={Styles.nav_ul_li}>
+              <Link className={Styles.nav_ul_li_a} href="/about">About</Link>
           </li>
           <li className={Styles.nav_ul_li}>
             <Link className={Styles.nav_ul_li_a} href="/projekte">Projekte</Link>

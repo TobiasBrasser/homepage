@@ -188,7 +188,11 @@
     }
 
     .logo{
-        width: 60%;
+        width: 150%;
         margin-left: 10px
+    }
+
+    .logoflyout{
+        width: 60%;
     }
 }
