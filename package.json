@@ -1,9 +1,12 @@
 {
   "name": "homepage",
+  "homepage": "https://tobiasbrasser.github.io/homepage",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "build": "next build",
+    "deploy": "next build && gh-pages -d .next"
   },
   "keywords": [],
   "author": "",

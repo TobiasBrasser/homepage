@@ -7,7 +7,7 @@ export default function AppPage({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo-color.png" />
       </Head>
       <Navbar />
       <Component {...pageProps} />

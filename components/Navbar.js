@@ -27,13 +27,15 @@ function Navbar() {
             <div></div>
           </div>
           <img className={Styles.logo} src="/logo.png" alt="Logo" />
-          <h1 className={Styles.digibra}>digibra</h1>
         </div>
         
         <nav className={Styles.rightSide}>
           <ul className={Styles.nav_ul}>
             <li className={Styles.nav_ul_li}>
               <Link className={Styles.nav_ul_li_a} href="/">Home</Link>
+            </li> 
+            <li className={Styles.nav_ul_li}>
+              <Link className={Styles.nav_ul_li_a} href="/about">About</Link>
             </li>
             <li className={Styles.nav_ul_li}>
               <Link className={Styles.nav_ul_li_a} href="/projekte">Projekte</Link>
@@ -41,6 +43,7 @@ function Navbar() {
             <li className={Styles.nav_ul_li}>
               <Link className={Styles.nav_ul_li_a} href="/hobbies">Hobbies</Link>
             </li>
+           
           </ul>
         </nav>
       </div>
@@ -61,6 +64,7 @@ function Navbar() {
           <li className={Styles.nav_ul_li}> 
             <Link className={Styles.nav_ul_li_a} href="/hobbies">Hobbies</Link>
           </li>
+
         </ul>
       </nav>
 
