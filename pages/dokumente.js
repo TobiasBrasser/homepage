@@ -1,42 +1,27 @@
-import { useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { AuthContext } from '../context/AuthContext';
 import { useRouter } from 'next/router';
-import jwt from 'jsonwebtoken';
 
-const secretKey = process.env.NEXT_PUBLIC_JWT_SECRET;
+const Dokumente = () => {
+  const { isAuthenticated } = useContext(AuthContext);
+  const router = useRouter();
 
-export default function Dokumente() {
-    const [loading, setLoading] = useState(true);
-    const router = useRouter();
-  
-    useEffect(() => {
-      const token = localStorage.getItem('token');
-      console.log('Token:', token);
-    
-      if (!token) {
-        console.log('Token nicht vorhanden. Weiterleitung zur Login-Seite...');
-        router.push('/login');
-      } else {
-        try {
-          jwt.verify(token, secretKey);
-          setLoading(false);
-          console.log('Token erfolgreich verifiziert. Weiterleitung zur Dokumente-Seite...');
-        } catch (err) {
-          localStorage.removeItem('token');
-          console.error('Fehler beim Verifizieren des Tokens:', err);
-          console.log('Token ungültig. Weiterleitung zur Login-Seite...');
-          router.push('/login');
-        }
-      }
-    }, [router]);
-  
-    if (loading) {
-      return <p>Loading...</p>;
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.push('/login');
     }
-  
-    return (
-      <div>
-        <h1>Dokumente</h1>
-        <p>Geheimer Bereich mit Dokumenten.</p>
-      </div>
-    );
+  }, [isAuthenticated, router]);
+
+  if (!isAuthenticated) {
+    return <div>Loading...</div>;
   }
+
+  return (
+    <div>
+      <h1>Dokumente</h1>
+      <p>This is a protected page.</p>
+    </div>
+  );
+};
+
+export default Dokumente;

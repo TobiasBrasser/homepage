@@ -1,46 +1,96 @@
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.socialLinks {
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p {
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(3) scaleX(2.25);
+  transform-origin: center bottom; /* Updated transform-origin */
+  box-sizing: border-box;
+  display: block;
+  pointer-events: none;
+}
+
 .footer {
-    background-color: #f1f1f1; 
-    color: #333; 
-    padding: 20px 0;
-    text-align: center;
-    border-top: 1px solid #ddd; 
-    font-family: 'Ubuntu', sans-serif;
-    margin-top: 10%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.content {
+  width: 80%;
+  height: 320px;;
+  display: inline-block;
+  align-items: center;
+}
+
+
+.linkedin {
+  width: 40%;
+}
+
+.github {
+  width: 40%;
+}
+
+.li {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.p_Modal{
+  display: flex;
+  justify-content: center;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 800px) {
+
+  .svg {
+    transform: scaleY(1.5) scaleX(1.5); 
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+
+  .linkedin  {
+    width: 60%; 
   }
-  
+
+  .github {
+    width:  60%;
+  }
+
+  .content{
+    height: 10%;
+  }
   .socialLinks {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    display: block;
+    gap: 50px; 
   }
-  
-  .socialLinks li {
-    display: inline;
-    margin: 10px;
-  }
-  
-  .socialLinks a {
-    color: #333; 
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .socialLinks a:hover {
-    color: #007bff; 
-  }
-
-  .linkedin{
-    width: 3%;
-  }
-
-  .github{
-    width: 3%;
-  }
-  
+}

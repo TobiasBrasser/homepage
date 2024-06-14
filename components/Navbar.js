@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import Link from 'next/link';
 import Styles from './Navbar.module.css';
+import { useRouter } from 'next/router';
+import { AuthContext } from '../context/AuthContext';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isAuthenticated } = useContext(AuthContext);
+  const router = useRouter();
 
   useEffect(() => {
     if (menuOpen) {
@@ -11,11 +15,27 @@ function Navbar() {
     } else {
       document.body.style.overflow = 'auto';
     }
+
+    handleDocumentsClick();
+  
   }, [menuOpen]);
 
+  const handleDocumentsClick = useCallback(
+    (e) => {
+      if (isAuthenticated) {
+        router.push('/dokumente');
+      } else {
+        router.push('/login');
+      }
+    },
+    [isAuthenticated, router]
+  );
+  
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
 
   return (
     <>
@@ -44,10 +64,9 @@ function Navbar() {
               <Link className={Styles.nav_ul_li_a} href="/hobbies">Hobbies</Link>
             </li>
             <li className={Styles.nav_ul_li}>
-              <Link className={Styles.nav_ul_li_a} href="./dokumente">🔒 Dokumente</Link>
+              <a onClick={handleDocumentsClick} className={Styles.nav_ul_li_a}>🔒 Dokumente</a>
             </li>
           </ul>
-         
         </nav>
       </div>
 
@@ -71,7 +90,7 @@ function Navbar() {
             <Link className={Styles.nav_ul_li_a} href="/hobbies">Hobbies</Link>
           </li>
           <li className={Styles.nav_ul_li}>
-              <Link className={Styles.nav_ul_li_a} href="/dokumente">🔒 Dokumente</Link>
+              <a onClick={handleDocumentsClick} className={Styles.nav_ul_li_a}>🔒 Dokumente</a>
           </li>
         </ul>
       </nav>
