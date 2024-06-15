@@ -8,36 +8,38 @@
 .text_area{
     align-content: center;
     border-radius: 15px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     width: 100%;
-    height: 64px;
+    height: 50px;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 2px 0 rgba(0, 0, 0, 0.19);
     border: none;
+    text-indent: 10px;
 }
 
 .text_input{
     margin-top: 1.2rem;
-    font-size: 20px;
+    font-size: 30px;
     border: none;
     width: 80%;
+    margin-left: 10%;
 }
 
 .btn{
     display: flex;
-    border-radius: 30px;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
     background: #ED2647;
     border: none;
-    font-family: 'Montserrat';
     font-size: 20px;
     color: #FFFFFF;
     /* box-shadow: 0 4px 8px 0 #ED2647, 0 6px 20px 0 rgba(181, 141, 237, 0.9); */
     cursor: pointer;
-    width: 50%;
-    margin-left: 25%;
-    height: 20%;   
-    font-family: 'Ubuntu', sans-serif;  
+    width: 100%;
+    height: 50px;   
+    font-family: 'Ubuntu', sans-serif; 
+    margin-top: 5%; 
+    
 }
 
 .login{
@@ -47,14 +49,30 @@
     width: 50%;
     margin-top: 1%;
     margin-left: 25%;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
     border-radius: 22px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
     font-family: 'Ubuntu', sans-serif;  
 }
 
-.p {
-    margin-top: 1%;
-    margin-bottom: 5%;
+.label{
+    padding: 10px 0px
 }
- 
+
+.empty{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 466px) {
+
+.text_area{
+    height: 50px
+}
+
+.btn {
+    width: 100%;
+    margin-left: 0 
+}
+    
+}

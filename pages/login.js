@@ -25,6 +25,7 @@ const Login = () => {
       <div className={Styles.login}>
         <form className={Styles.form} onSubmit={handleLogin}>
           <h1>Login</h1> 
+          <label className={Styles.label}>Username</label>
           <input
             className={Styles.text_area}
             type="text"
@@ -32,10 +33,11 @@ const Login = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
+          <label className={Styles.label}>Password</label>
           <input
             className={Styles.text_area}
             type="password"
-            placeholder="Password"
+            placeholder="******"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -43,6 +45,7 @@ const Login = () => {
           {error && <p style={{ color: 'red' }}>{error}</p>}
         </form>
       </div>
+      <div className={Styles.empty}></div>
     </div>
   );
 };
