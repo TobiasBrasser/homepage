@@ -1,96 +1,40 @@
-.background {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.socialLinks {
-  display:inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.p {
-  margin-top: 20%;
-  display: flex;
-  justify-content: center;
-}
-
-.svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: scaleY(3) scaleX(2.25);
-  transform-origin: center bottom; /* Updated transform-origin */
-  box-sizing: border-box;
-  display: block;
-  pointer-events: none;
-}
-
 .footer {
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0; 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 350px;
+  padding: 20px; 
   font-family: 'Ubuntu', sans-serif;
 }
 
 .content {
-  width: 80%;
-  height: 320px;;
-  display: inline-block;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
-
-.linkedin {
-  width: 40%;
+.p {
+  margin-right: 10%; 
+  margin-left: 10%;
 }
 
-.github {
-  width: 40%;
+.socialLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .li {
-  width: 10%;
-  display: flex;
-  justify-content: center;
+  width: auto;
 }
 
-.p_Modal{
-  display: flex;
-  justify-content: center;
-}
-
-/* Media Query for smaller screens */
-@media (max-width: 800px) {
-
-  .svg {
-    transform: scaleY(1.5) scaleX(1.5); 
-  }
-
-  .linkedin  {
-    width: 60%; 
-  }
-
-  .github {
-    width:  60%;
-  }
-
-  .content{
-    height: 10%;
-  }
-  .socialLinks {
-    gap: 50px; 
-  }
+.linkedin, .github {
+  width: 30px;
+  height: auto; 
 }

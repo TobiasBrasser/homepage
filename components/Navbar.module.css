@@ -8,12 +8,6 @@
     display: flex;
     align-items: center;
 }
-
-.digibra {
-    margin-left: 10%;
-    font-family: 'Ubuntu', sans-serif;
-}
-
 .rightSide {
     display: flex;
     justify-content: space-between;
@@ -84,7 +78,6 @@
     border: black;
     border-color: black;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     padding: 10px;
 }
 
@@ -188,7 +181,7 @@
     }
 
     .logo{
-        width: 150%;
+        width: 100%;
         margin-left: 10px
     }
 

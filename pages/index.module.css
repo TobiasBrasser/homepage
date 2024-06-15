@@ -43,7 +43,7 @@
     }
 
     .textBox {
-        position: static; /* Ensures it is in the flow of the document */
+        position: static; 
         padding: 20px;
     }
 }

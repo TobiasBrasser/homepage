@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useRouter } from 'next/router';
+import Styles from './login.module.css';
 
 const Login = () => {
   const { login } = useContext(AuthContext);
@@ -9,9 +10,8 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-
-  
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     const success = login(username, password);
     if (success) {
       router.push('/dokumente');
@@ -21,22 +21,28 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+    <div className={Styles.body}>
+      <div className={Styles.login}>
+        <form className={Styles.form} onSubmit={handleLogin}>
+          <h1>Login</h1> 
+          <input
+            className={Styles.text_area}
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            className={Styles.text_area}
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit" className={Styles.btn}>Login</button>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
+        </form>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,3 @@
-// context/AuthContext.js
-
 import React, { createContext, useState, useEffect } from 'react';
 
 export const AuthContext = createContext();
@@ -15,7 +13,6 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (username, password) => {
-    // Simulated authentication logic, replace with actual logic
     if (username === 'user' && password === 'pass') {
       setIsAuthenticated(true);
       localStorage.setItem('authToken', 'your-token');
