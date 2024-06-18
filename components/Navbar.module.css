@@ -1,31 +1,47 @@
-.logo {
-    width: 70%;
-    position: relative;
-}
-
-.leftSide {
-    width: 20%;
-    display: flex;
-    align-items: center;
-}
-.rightSide {
+/* Globale Stile für die Navbar */
+.all {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    background-color: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 103; 
+  }
+  
 
+  .leftSide {
+    width: 20%;
+    display: flex;
+    align-items: center;
+  }
 
-.nav_ul {
+  .logo {
+    width: 70%;
+    position: relative;
+  }
+  
+  .rightSide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav_ul {
     list-style: none;
     padding: 0;
     display: flex;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
     font-size: 100%;
-    margin-left: 0%;
-}
-
-.nav_ul_mobile {
+    margin-left: 0;
+  }
+  
+  .nav_ul_mobile {
     list-style: none;
     padding: 0;
     display: none;
@@ -34,15 +50,15 @@
     font-family: 'Ubuntu', sans-serif;
     font-size: 100%;
     margin: 0;
-}
-
-.nav_ul_li {
+  }
+  
+  .nav_ul_li {
     margin-right: 20px;
     margin-top: 0;
     display: flex;
-}
-
-.nav_ul_li_a {
+  }
+  
+  .nav_ul_li_a {
     font-size: 100%;
     padding: 7px 15px;
     border-radius: 3px;
@@ -51,9 +67,9 @@
     position: relative;
     color: black;
     font-size: large;
-}
-
-.nav_ul_li_a:after {
+  }
+  
+  .nav_ul_li_a:after {
     content: '';
     display: block;
     position: absolute;
@@ -63,55 +79,43 @@
     height: 2px;
     background: #ED2647;
     transition: width 0.5s ease;
-}
-
-.nav_ul_li_a.active:after,
-.nav_ul_li_a:hover:after {
+  }
+  
+  .nav_ul_li_a.active:after,
+  .nav_ul_li_a:hover:after {
     width: 100%;
-}
+  }
 
-.all {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    border: black;
-    border-color: black;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.burger {
+  .burger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     z-index: 101;
-}
-
-.burger div {
+  }
+  
+  .burger div {
     width: 25px;
     height: 3px;
     background-color: black;
     margin: 3px;
     transition: all 0.3s ease;
-}
-
-.burger.open div:nth-child(1) {
+  }
+  
+  .burger.open div:nth-child(1) {
     transform: rotate(45deg) translate(8px, 7px);
-}
-
-.burger.open div:nth-child(2) {
+  }
+  
+  .burger.open div:nth-child(2) {
     opacity: 0;
-}
-
-.burger.open div:nth-child(3) {
+  }
+  
+  .burger.open div:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
-}
+  }
 
-.nav_open {
+  .nav_open {
     display: flex !important;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
@@ -124,23 +128,24 @@
     transition: transform 0.3s ease;
     transform: translateX(0);
     z-index: 102;
-}
-
-.nav_closed {
+  }
+  
+  .nav_closed {
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 102;
-}
-
-.mainContent {
+  }
+  
+  .mainContent {
+    margin-top: 60px; 
     transition: filter 0.3s ease;
-}
-
-.mainContent.blurred {
+  }
+  
+  .mainContent.blurred {
     filter: blur(5px);
-}
+  }
 
-.overlay {
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -148,44 +153,43 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
-}
-
-.lock{
+  }
+  
+  .lock {
     width: 5%;
-}
-
-@media (max-width: 1024px) {
+  }
+  
+  @media (max-width: 1024px) {
     .nav_ul {
-        display: none;
-        margin-bottom: 100%;
+      display: none;
     }
-
+  
     .burger {
-        display: flex;
-        z-index: 121;
+      display: flex;
     }
-
+  
     .nav_open .nav_ul_mobile {
-        display: flex;
-        margin-bottom: 100%
+      display: flex;
+      margin-top: 50%;
     }
-
+  
     .nav_ul_li {
-        margin-right: 0;
-        margin-bottom: 10px;
-        margin-top: 10%;
+      margin-right: 0;
+      margin-bottom: 10px;
+      margin-top: 10%;
     }
-
+  
     .nav_ul_li_a {
-        padding: 5px 10px;
+      padding: 5px 10px;
     }
-
-    .logo{
-        width: 100%;
-        margin-left: 10px
+  
+    .logo {
+      width: 100%;
+      margin-left: 10px;
     }
-
-    .logoflyout{
-        width: 60%;
+  
+    .logoflyout {
+      width: 60%;
     }
-}
+  }
+  

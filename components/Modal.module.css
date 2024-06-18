@@ -11,13 +11,14 @@
   }
   
   .modalContent {
-    background-color: #fefefe;
+    background-color: #F5F5F5;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    border-radius: 10px;
   }
   
   .closeButton {

@@ -51,9 +51,6 @@ function Navbar() {
               <Link href="/" className={`${Styles.nav_ul_li_a} ${currentPath === '/' ? Styles.active : ''}`}>Home</Link>
             </li>
             <li className={Styles.nav_ul_li}>
-              <Link href="/about" className={`${Styles.nav_ul_li_a} ${currentPath === '/about' ? Styles.active : ''}`}>About</Link>
-            </li>
-            <li className={Styles.nav_ul_li}>
               <Link href="/projekte" className={`${Styles.nav_ul_li_a} ${currentPath === '/projekte' ? Styles.active : ''}`}>Projekte</Link>
             </li>
             <li className={Styles.nav_ul_li}>
@@ -77,9 +74,6 @@ function Navbar() {
             <Link href="/" className={`${Styles.nav_ul_li_a} ${currentPath === '/' ? Styles.active : ''}`}>Home</Link>
           </li>
           <li className={Styles.nav_ul_li}>
-            <Link href="/about" className={`${Styles.nav_ul_li_a} ${currentPath === '/about' ? Styles.active : ''}`}>About</Link>
-          </li>
-          <li className={Styles.nav_ul_li}>
             <Link href="/projekte" className={`${Styles.nav_ul_li_a} ${currentPath === '/projekte' ? Styles.active : ''}`}>Projekte</Link>
           </li>
           <li className={Styles.nav_ul_li}>
@@ -91,7 +85,7 @@ function Navbar() {
         </ul>
       </nav>
 
-      {menuOpen && <div className={`${Styles.overlay} ${menuOpen ? Styles.visible : ''}`} onClick={toggleMenu}></div>}
+      {menuOpen && <div className={Styles.overlay} onClick={toggleMenu}></div>}
     </>
   );
 }
