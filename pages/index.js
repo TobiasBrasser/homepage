@@ -2,6 +2,7 @@ import React from 'react';
 import Styles from "./index.module.css";
 import Head from 'next/head';
 import Typewriter from 'typewriter-effect'
+import about from './about'
 
 function IndexPage() {
   return (
