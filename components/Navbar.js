@@ -52,17 +52,17 @@ function Navbar() {
                 <Link href="/" className={`${Styles.nav_ul_li_a} ${currentPath === '/' ? Styles.active : ''}`}>
                   Home
                 </Link>
-                <div className={Styles.dropdown_content}>
-                  <Link className={Styles.nav_ul_li_a_dd} href="/about">Über mich</Link>
-                  <Link className={Styles.nav_ul_li_a_dd} href="/subpage2">Schullaufbahn</Link>
-                </div>
               </div>
+            </li> 
+            <li className={Styles.nav_ul_li}>
+              <Link href="/ausbildung" className={`${Styles.nav_ul_li_a} ${currentPath === '/ausbildung' ? Styles.active : ''}`}>Ausbildung</Link>
             </li>
             <li className={Styles.nav_ul_li}>
               <Link href="/projekte" className={`${Styles.nav_ul_li_a} ${currentPath === '/projekte' ? Styles.active : ''}`}>Projekte</Link>
             </li>
+           
             <li className={Styles.nav_ul_li}>
-              <Link href="/hobbies" className={`${Styles.nav_ul_li_a} ${currentPath === '/hobbies' ? Styles.active : ''}`}>Hobbies</Link>
+              <Link href="/kompetenzen" className={`${Styles.nav_ul_li_a} ${currentPath === '/kompetenzen' ? Styles.active : ''}`}>Kompetenzen</Link>
             </li>
             <li className={Styles.nav_ul_li}>
               <a onClick={handleDocumentsClick} className={`${Styles.nav_ul_li_a} ${currentPath === '/dokumente' ? Styles.active : ''}`}>🔒 Dokumente</a>
@@ -71,30 +71,29 @@ function Navbar() {
         </nav>
       </div>
 
-      <div className={`${Styles.mainContent} ${menuOpen ? Styles.blurred : ''}`}>
-        {/* Hauptinhalt der Seite */}
+      <div className={`${Styles.mainContent} ${menuOpen ? Styles.blurred : ''}`}> 
       </div>
 
       <nav className={`${menuOpen ? Styles.nav_open : Styles.nav_closed}`}>
         <ul className={Styles.nav_ul_mobile}>
-          <img className={Styles.logoflyout} src="./logo.png" alt="Logo" />
           <li className={Styles.nav_ul_li}>
             <div className={Styles.dropdown}>
               <Link href="/" className={`${Styles.nav_ul_li_a} ${currentPath === '/' ? Styles.active : ''}`}>
                 Home
               </Link>
-              <div className={Styles.dropdown_content}>
-                <Link href="/subpage1">Subpage 1</Link>
-                <Link href="/subpage2">Subpage 2</Link>
-              </div>
             </div>
+          </li>
+          <li className={Styles.nav_ul_li}>
+            <Link href="/ausbildung" className={`${Styles.nav_ul_li_a} ${currentPath === '/ausbildung' ? Styles.active : ''}`}>Ausbildung</Link>
           </li>
           <li className={Styles.nav_ul_li}>
             <Link href="/projekte" className={`${Styles.nav_ul_li_a} ${currentPath === '/projekte' ? Styles.active : ''}`}>Projekte</Link>
           </li>
           <li className={Styles.nav_ul_li}>
-            <Link href="/hobbies" className={`${Styles.nav_ul_li_a} ${currentPath === '/hobbies' ? Styles.active : ''}`}>Hobbies</Link>
+              <Link href="/kompetenzen" className={`${Styles.nav_ul_li_a} ${currentPath === '/kompetenzen' ? Styles.active : ''}`}>Kompetenzen</Link>
           </li>
+          
+          
           <li className={Styles.nav_ul_li}>
             <a onClick={handleDocumentsClick} className={`${Styles.nav_ul_li_a} ${currentPath === '/dokumente' ? Styles.active : ''}`}>🔒 Dokumente</a>
           </li>

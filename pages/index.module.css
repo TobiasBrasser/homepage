@@ -24,6 +24,11 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+.title_main {
+    text-align: center;
+}
+
+
 .title_span {
     width: 100%;
     margin-bottom: 1%;
@@ -35,6 +40,18 @@
 
 .p_red {
     color: #ED2647;
+}
+
+.about_me{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about_p{
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 10px;
 }
 
 @media (max-width: 700px) {
