@@ -4,6 +4,8 @@ import { FaGraduationCap, FaSchool, FaUserGraduate, FaCertificate } from 'react-
 
 const Ausbildung = () => {
     return (
+        <>
+        <h1 className={Styles.title}>Schullaufbahn - Ausbildung</h1>
         <div className={Styles.timelineContainer}>
             <ul className={Styles.timeline}>
                 <li className={`${Styles.timelineItem} ${Styles.timelineItemOdd}`}>
@@ -44,6 +46,7 @@ const Ausbildung = () => {
                 </li>
             </ul>
         </div>
+        </>
     );
 }
 

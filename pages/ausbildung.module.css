@@ -1,3 +1,9 @@
+.title{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 10%;
+}
+
 .timeline {
     position: relative;
     list-style-type: none;
@@ -6,8 +12,8 @@
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
     width: 100%;
-    padding: 40px 0;
-    margin-top: 30%;
+    padding: 0;
+    margin-top: 20%;
     margin-bottom: 29%;
 }
 
@@ -94,6 +100,7 @@
         width: 25px;
         height: 100%;
         transform: translateX(-50%);
+        border-radius: 10px;
     }
 
     .timelineItem {
@@ -102,21 +109,21 @@
         justify-content: flex-start;
         align-items: center;
         margin-top: 10%;
-        position: relative;
+        position: relative;      
     }
 
     .timelineItemOdd .timelineContent {
         transform: translateY(0);
         order: 2;
         margin-left: 20px;
-        margin-right: 60%; 
+        margin-right: 80%; 
     }
 
     .timelineItemEven .timelineContent {
         transform: translateY(0);
         order: 1;
         margin-right: 20px; 
-        margin-left: 60%;;
+        margin-left: 80%;;
     }
 
     .timelineItem:not(:first-child) {

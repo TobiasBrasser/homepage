@@ -21,16 +21,21 @@ function Navbar() {
   const handleDocumentsClick = useCallback(
     (e) => {
       if (!isAuthenticated) {
-        router.push('/dokumente');
-      } else {
         router.push('/login');
+      } else {
+        router.push('/dokumente');
       }
+      setMenuOpen(false);
     },
     [isAuthenticated, router]
   );
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
   };
 
   return (
@@ -42,17 +47,15 @@ function Navbar() {
             <div></div>
             <div></div>
           </div>
-          <img className={Styles.logo} src='./logo.png' alt="Logo" />
+          <a href='/'><img className={Styles.logo}src='./logo.png' alt="Logo"/></a>
         </div>
 
         <nav className={Styles.rightSide}>
           <ul className={Styles.nav_ul}>
             <li className={Styles.nav_ul_li}>
-              <div className={Styles.dropdown}>
                 <Link href="/" className={`${Styles.nav_ul_li_a} ${currentPath === '/' ? Styles.active : ''}`}>
                   Home
                 </Link>
-              </div>
             </li> 
             <li className={Styles.nav_ul_li}>
               <Link href="/ausbildung" className={`${Styles.nav_ul_li_a} ${currentPath === '/ausbildung' ? Styles.active : ''}`}>Ausbildung</Link>
@@ -77,23 +80,19 @@ function Navbar() {
       <nav className={`${menuOpen ? Styles.nav_open : Styles.nav_closed}`}>
         <ul className={Styles.nav_ul_mobile}>
           <li className={Styles.nav_ul_li}>
-            <div className={Styles.dropdown}>
-              <Link href="/" className={`${Styles.nav_ul_li_a} ${currentPath === '/' ? Styles.active : ''}`}>
+              <Link href="/" className={`${Styles.nav_ul_li_a} ${currentPath === '/' ? Styles.active : ''}`} onClick={handleLinkClick}>
                 Home
               </Link>
-            </div>
           </li>
           <li className={Styles.nav_ul_li}>
-            <Link href="/ausbildung" className={`${Styles.nav_ul_li_a} ${currentPath === '/ausbildung' ? Styles.active : ''}`}>Ausbildung</Link>
+            <Link href="/ausbildung" className={`${Styles.nav_ul_li_a} ${currentPath === '/ausbildung' ? Styles.active : ''}`} onClick={handleLinkClick}>Ausbildung</Link>
           </li>
           <li className={Styles.nav_ul_li}>
-            <Link href="/projekte" className={`${Styles.nav_ul_li_a} ${currentPath === '/projekte' ? Styles.active : ''}`}>Projekte</Link>
+            <Link href="/projekte" className={`${Styles.nav_ul_li_a} ${currentPath === '/projekte' ? Styles.active : ''}`} onClick={handleLinkClick}>Projekte</Link>
           </li>
           <li className={Styles.nav_ul_li}>
-              <Link href="/kompetenzen" className={`${Styles.nav_ul_li_a} ${currentPath === '/kompetenzen' ? Styles.active : ''}`}>Kompetenzen</Link>
-          </li>
-          
-          
+              <Link href="/kompetenzen" className={`${Styles.nav_ul_li_a} ${currentPath === '/kompetenzen' ? Styles.active : ''}`} onClick={handleLinkClick}>Kompetenzen</Link>
+          </li> 
           <li className={Styles.nav_ul_li}>
             <a onClick={handleDocumentsClick} className={`${Styles.nav_ul_li_a} ${currentPath === '/dokumente' ? Styles.active : ''}`}>🔒 Dokumente</a>
           </li>
