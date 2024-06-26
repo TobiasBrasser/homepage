@@ -1,0 +1,15 @@
+.openModalButton {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px; 
+  }
+  
+  .openModalButton:hover {
+    background-color: #ED2647;
+    color: white;
+  }
+  

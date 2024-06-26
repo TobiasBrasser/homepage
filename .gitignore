@@ -1,6 +1,6 @@
 # Node modules Verzeichnis
-/node_modules/
-
+/frontend/node_modules/
+/auth-backend/node_modules/
 # Build-Verzeichnisse
 /build/
 /dist/

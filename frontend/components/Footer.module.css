@@ -1,0 +1,79 @@
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Ubuntu', sans-serif;
+  z-index: 1;
+}
+
+.content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 20%;
+  justify-content: center;
+  align-items: flex-start; 
+  padding: 10px 20px;
+}
+
+.legal, .contact {
+  display: flex;
+  align-items: flex-start; 
+  flex-direction: column; 
+  gap: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.p {
+  margin: 0; 
+}
+
+.socialLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.li {
+  width: auto;
+}
+
+.linkedin, .github {
+  width: 30px;
+  height: auto;
+}
+
+.hr {
+  width: 80%;
+  margin: 0;
+  margin-bottom: 10px;
+  border: 0; 
+  border-top: 2px solid #ED2647; 
+}
+
+.h4 {
+  height: 5px;
+}
+
+@media (max-width: 456px) {
+  .content {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .legal, .contact {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
