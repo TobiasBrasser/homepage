@@ -1,8 +1,8 @@
-import React from 'react';
 import Styles from "./index.module.css";
 import Head from 'next/head';
 import Typewriter from 'typewriter-effect'
-import about from './about'
+import { FaArrowRight, FaArrowLeft, FaArrowDown, FaArrowUp } from 'react-icons/fa';
+
 
 function IndexPage() {
   return (
@@ -12,7 +12,6 @@ function IndexPage() {
                 <meta name="description" content="Beschreibung der Startseite" />
                 <link rel="icon" href="../public/logo.png" />
         </Head>
-
         <div className={Styles.gallery}>
             <div className={Styles.textBox}>
               <h1 className={Styles.title}>
@@ -31,9 +30,18 @@ function IndexPage() {
                     }}
                     />
                 </span>
-              </h1>      
+              </h1> 
+              <div className={Styles.buttonContainer}>  
+                <a ><button className={Styles.aboutButton}>
+                  <FaArrowDown className={Styles.icon} /> Über mich
+                </button></a>
+                <a className={Styles.link} href="./ausbildung"><button className={Styles.nextButton}>
+                Ausbildung <FaArrowRight className={Styles.icon} />
+                </button></a>  
+              </div> 
             </div>
         </div>
+        
         <div className={Styles.about_me}>
           <h1 className={Styles.title_main}>Some title</h1>
           <p className={Styles.about_p}>kdfjslöööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööökdfjslöööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööökdfjslöööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööökdfjslöööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööökdfjslöööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööökdfjslöööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööööö</p>

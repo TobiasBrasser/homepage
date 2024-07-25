@@ -5,12 +5,12 @@ function projekte() {
   return (
     <>
     <Head>
-                <title>Projekte</title>
-                <meta name="description" content="Beschreibung der Startseite" />
-                <link rel="icon" href="../public/logo.png" />
-        </Head>
+      <title>Projekte</title>
+      <meta name="description" content="Beschreibung der Startseite" />
+      <link rel="icon" href="../public/logo.png" />
+    </Head>
     <div>
-      
+      A
     </div>
     </>
   )

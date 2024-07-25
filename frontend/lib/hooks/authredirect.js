@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useSession } from "../lib/hooks/session";
+import { useSession } from "../hooks/session";
 import { useRouter } from "next/router";
 
 export function useAuthRedirect(pageProps) {

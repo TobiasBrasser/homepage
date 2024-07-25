@@ -1,7 +1,8 @@
+import Styles from './Navbar.module.css';
 import React, { useState, useEffect, useContext, useCallback } from 'react';
 import Link from 'next/link';
-import Styles from './Navbar.module.css';
 import { useRouter } from 'next/router';
+import { isSignedIn } from '../lib/hooks/authredirect'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,20 @@ function Navbar() {
     } else {
       document.body.style.overflow = 'auto';
     }
+    
   }, [menuOpen]);
+
+  useEffect(() => {
+    currentPath;
+  })
+  
+  const handleOnClick = () => {
+    if (isSignedIn) {
+      router.push('/dokumente')
+    } else {
+      router.push('/login')
+    }
+  }
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -42,7 +56,7 @@ function Navbar() {
               <Link href="/" className={`${Styles.nav_ul_li_a} ${currentPath === '/' ? Styles.active : ''}`}>
                 Home
               </Link>
-            </li> 
+            </li>
             <li className={Styles.nav_ul_li}>
               <Link href="/ausbildung" className={`${Styles.nav_ul_li_a} ${currentPath === '/ausbildung' ? Styles.active : ''}`}>Ausbildung</Link>
             </li>
@@ -53,7 +67,7 @@ function Navbar() {
               <Link href="/kompetenzen" className={`${Styles.nav_ul_li_a} ${currentPath === '/kompetenzen' ? Styles.active : ''}`}>Kompetenzen</Link>
             </li>
             <li className={Styles.nav_ul_li}>
-              <a className={`${Styles.nav_ul_li_a} ${currentPath === '/dokumente' ? Styles.active : ''}`}>🔒 Dokumente</a>
+              <a onClick={handleOnClick} className={`${Styles.nav_ul_li_a} ${currentPath === '/dokumente' ? Styles.active : ''}`}>🔒 Dokumente</a>
             </li>
           </ul>
         </nav>
@@ -78,10 +92,12 @@ function Navbar() {
             <Link href="/kompetenzen" className={`${Styles.nav_ul_li_a} ${currentPath === '/kompetenzen' ? Styles.active : ''}`} onClick={handleLinkClick}>Kompetenzen</Link>
           </li>
           <li className={Styles.nav_ul_li}>
-            <a className={`${Styles.nav_ul_li_a} ${currentPath === '/dokumente' ? Styles.active : ''}`}>🔒 Dokumente</a>
+            <a onClick={handleOnClick} className={`${Styles.nav_ul_li_a} ${currentPath === '/dokumente' ? Styles.active : ''}`}>🔒 Dokumente</a>
           </li>
         </ul>
       </nav>
+
+      {menuOpen && <div className={Styles.overlay} onClick={toggleMenu}></div>}
     </>
   );
 }

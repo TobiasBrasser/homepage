@@ -1,6 +1,7 @@
+import Styles from './ImpressumModal.module.css';
 import React, { useState } from 'react';
 import Modal from './Modal';
-import Styles from './ImpressumModal.module.css';
+
 
 const ImpressumModal = () => {
   const [showModal, setShowModal] = useState(false);

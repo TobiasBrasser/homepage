@@ -1,7 +1,7 @@
 .openModalButton {
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
-    color: black;
-    border: none;
+    color: #ED2647;
+    background-color: #fff;
+    border: 1px solid #ED2647;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;

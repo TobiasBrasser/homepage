@@ -1,3 +1,5 @@
+
+import Styles from './login.module.css'
 import { login } from "../lib/api/auth";
 import { useState } from "react";
 import { useSession } from "../lib/hooks/session";
@@ -29,14 +31,19 @@ export default function IndexPage() {
 
     return (
         <div>
-            <h1>Login</h1>
-            <br/>
             {error && <p>{error}</p>}
-            <form>
-                <input type="text" name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} /><br/>
-                <input type="password" name="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} /><br/>
-                <button onClick={handleLogin}>Login</button>
-            </form>
+            <div className={Styles.login}>
+                <form className={Styles.form}>
+                    <h1 className={Styles.title}>Login</h1>
+                    <div className={Styles.text_area}>
+                        <label className={Styles.label}>Email</label>
+                        <input className={Styles.text_input} type="text" name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} /><br/>
+                        <label className={Styles.label}>Password</label>
+                        <input className={Styles.text_input} type="password" name="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} /><br/>
+                        <button className={Styles.btn} onClick={handleLogin}>Login</button>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }

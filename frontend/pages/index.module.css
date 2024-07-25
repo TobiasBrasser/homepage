@@ -54,6 +54,54 @@
     padding: 10px;
 }
 
+.link{
+    text-decoration: none;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.aboutButton{
+    color: #ED2647;
+    background-color: #fff;
+    border: 1px solid #ED2647;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px; 
+    display: flex;
+    gap: 5px;
+}
+
+.nextButton{
+    color: #ED2647;
+    background-color: #fff;
+    border: 1px solid #ED2647;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px; 
+    display: flex;
+    gap: 5px;
+}
+
+.aboutButton:hover{
+    background-color: #ED2647;
+    color: white;
+}
+
+.nextButton:hover{
+    background-color: #ED2647;
+    color: white;
+}
+
+.icon {
+    
+}
+
 @media (max-width: 700px) {
     .gallery {
         width: 100%;
