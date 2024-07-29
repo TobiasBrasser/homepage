@@ -1,0 +1,63 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.modalContent {
+  background-color: #F5F5F5;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  border-radius: 10px;
+  position: relative;
+  transform-origin: bottom left;
+  transform: scale(0.5) translate(-50%, 50%);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.show {
+  transform: scale(1) translate(0, 0);
+  opacity: 1;
+}
+
+.hide {
+  transform: scale(0.5) translate(-50%, 50%);
+  opacity: 0;
+}
+
+.closeButton {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  color: #ED2647;
+  text-decoration: none;
+  cursor: pointer;
+}

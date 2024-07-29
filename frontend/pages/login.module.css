@@ -1,0 +1,66 @@
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%; 
+    margin: 10%; 
+}
+.text_area{
+    display: flex;
+    flex-direction: column;
+}
+
+.text_input{
+    padding: 20px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.btn{
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background: #ED2647;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 50px;   
+    font-family: 'Ubuntu', sans-serif; 
+    margin-top: 5%; 
+    
+}
+
+.title{
+    text-align: start;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    font-family: 'Ubuntu', sans-serif;  
+}
+
+.label{
+    padding: 10px 0px
+}
+
+@media (max-width: 466px) {
+
+.text_area{
+    height: 50px
+}
+
+.btn {
+    width: 100%;
+    margin-left: 0 
+}
+    
+}
