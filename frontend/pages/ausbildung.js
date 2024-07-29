@@ -2,7 +2,11 @@ import Styles from './ausbildung.module.css';
 import { FaGraduationCap, FaSchool, FaUserGraduate, FaCertificate } from 'react-icons/fa';
 import Head from 'next/head';
 import Modal from '../components/Modal';
+<<<<<<< HEAD
 import { useState } from 'react';
+=======
+
+>>>>>>> origin/main
 const timelineData = [
     {
         icon: <FaCertificate />,
